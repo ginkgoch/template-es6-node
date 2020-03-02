@@ -2,6 +2,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: path.join(__dirname, 'src', 'index'),
+  target: 'node',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "bundle.js",
@@ -18,11 +19,7 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         presets: [
-          ["@babel/preset-env", {
-            "targets": {
-              "browsers": "last 2 chrome versions"
-            }
-          }]
+          ["@babel/preset-env"]
         ]
       }
     }]

@@ -1,3 +1,3 @@
-import profile from './shared/profile';
+import { cpus } from './shared/env';
 
-console.log(profile);
+console.log(cpus.length);
